@@ -49,7 +49,7 @@ const isRootPath = Astro.url.pathname === "/";
   }
 </div>
 
-<script is:client>
+<script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     function handleDelete(event) {
       event.stopImmediatePropagation();
