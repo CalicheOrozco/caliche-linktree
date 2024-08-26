@@ -1,16 +1,27 @@
 ---
+import LinkCard from "../components/LinkCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import profiles from "../../constants/data";
 
+const title = "Welcome to Caliche Linktree";
+const description = "Explore public profiles and access important links.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title={title}>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <section class="links-section">
+    {
+      Object.keys(profiles).map((username) => {
+        const profile = profiles[username];
+        return (
+          <LinkCard
+            icon={profile.avatarUrl}
+            title={profile.name || profile.username}
+            url={`/${username}`}
+          />
+        );
+      })
+    }
+  </section>
+</MainLayout>
