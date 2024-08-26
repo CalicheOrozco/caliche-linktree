@@ -1,0 +1,101 @@
+---
+const { icon, title, url, cardsColor, textColor } = Astro.props;
+
+const isRootPath = Astro.url.pathname === "/";
+---
+
+<div
+  class="link-card"
+  style={`background-color: ${cardsColor || "#f9f9f9"}; color: ${textColor || "#000"};`}
+>
+  <div
+    class="link-card__content"
+    onclick={isRootPath
+      ? `window.location.href='${url}';`
+      : `window.open('${url}', '_blank');`}
+  >
+    <a
+      href={url}
+      class="link-card__link"
+      style={`color: ${textColor || "#000"};`}
+    >
+      {icon && <img src={icon} alt={title} class="link-card__icon" />}
+      <span class="link-card__title">{title}</span>
+    </a>
+  </div>
+
+  {
+    isRootPath && (
+      <div class="link-card__options">
+        <button class="link-card__more-options">⋮</button>
+        <div class="link-card__dropdown" style="display: none;">
+          <button
+            class="link-card__dropdown-item link-card__update"
+            data-title={title}
+            style={`color: ${textColor || "#000"};`}
+          >
+            Update
+          </button>
+          <button
+            class="link-card__dropdown-item link-card__delete"
+            data-title={title}
+            style={`color: ${textColor || "#000"};`}
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<script is:client>
+  document.addEventListener("DOMContentLoaded", () => {
+    function handleDelete(event) {
+      event.stopImmediatePropagation();
+      const title = event.target.getAttribute("data-title");
+      alert(`Delete perfil: ${title}`);
+    }
+
+    function handleUpdate(event) {
+      event.stopImmediatePropagation();
+      const title = event.target.getAttribute("data-title");
+      alert(`Update perfil: ${title}`);
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      const dropdown = event.target.nextElementSibling;
+      const isDropdownVisible = dropdown.style.display === "block";
+
+      document
+        .querySelectorAll(".link-card__dropdown")
+        .forEach((d) => (d.style.display = "none"));
+
+      dropdown.style.display = isDropdownVisible ? "none" : "block";
+    }
+
+    document.body.addEventListener("click", function (event) {
+      if (event.target.matches(".link-card__update")) {
+        handleUpdate(event);
+      }
+
+      if (event.target.matches(".link-card__delete")) {
+        handleDelete(event);
+      }
+
+      if (event.target.matches(".link-card__more-options")) {
+        toggleDropdown(event);
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".link-card__options")) {
+        document
+          .querySelectorAll(".link-card__dropdown")
+          .forEach((d) => (d.style.display = "none"));
+      }
+    });
+  });
+</script>
