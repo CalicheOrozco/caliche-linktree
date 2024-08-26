@@ -1,0 +1,47 @@
+---
+// Importación de componentes
+import MainLayout from "../layouts/MainLayout.astro";
+import ProfileHeader from "../components/ProfileHeader.astro";
+import LinkCard from "../components/LinkCard.astro";
+import profiles from "../../constants/data";
+
+// Obtención del perfil actual basado en la ruta
+const { user } = Astro.params;
+const profile = profiles[user] || null;
+
+// Redirigir a una página 404 si el perfil no existe
+if (!profile) {
+  return Astro.redirect("/404");
+}
+---
+
+<MainLayout
+  title={`Perfil de ${profile.username}`}
+  backgroundColor={profile.backgroundColor}
+>
+  {
+    profile.username && (
+      <ProfileHeader
+        username={profile.username}
+        bio={profile.bio}
+        avatarUrl={profile.avatarUrl}
+        backgroundColor={profile.backgroundColor}
+        textColor={profile.textColor}
+      />
+    )
+  }
+  <section class="links-section">
+    {
+      profile.links?.map((link, index) => (
+        <LinkCard
+          title={link.title}
+          url={link.url}
+          icon={link.icon || ""}
+          cardsColor={profile.cardsColor}
+          textColor={profile.textColor}
+          target="_blank"
+        />
+      ))
+    }
+  </section>
+</MainLayout>
