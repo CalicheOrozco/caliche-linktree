@@ -32,143 +32,113 @@ const profiles: Record<string, UserProfile> = {
     cardsColor: '#48BB78',
     textColor: '#fff'
   },
-  'Beeto-Qeeq': {
+  'Alex-Grajales': {
     id: 'c0606c0c',
-    username: 'Beeto-Qeeq',
-    name: 'Beeto Qeeq',
-    bio: 'Promoter in disruptive trends, investment areas, new models, projects, and solutions.',
+    username: 'Alex-Grajales',
+    name: 'Alex Grajales O.',
+    bio: 'PGRC | ISO27001 Lead Implementer | Infosec | IAM | MCBA | Passionate about communication',
     avatarUrl:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALyUhNkj182HlHKWadn3PyZXA9iVzXv623Q&s',
+      'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQo50Iaz9NTggtjl6FRI90FD4jWLqnnL6_zz-w7byuiM9Lf54go',
     links: [
       {
         title: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/beetoqeeq/',
+        url: 'https://www.linkedin.com/in/alejandrograjales/',
         id: 'cfd4'
       },
       {
-        title: 'Otherverse Industries',
-        url: 'https://www.linkedin.com/company/otherverse-industries/',
+        title: 'Dillo',
+        url: 'https://www.dillo.com.au/',
         id: 'cfd5'
-      },
-      {
-        title: 'INNDO CAPITAL',
-        url: 'https://www.linkedin.com/company/inndocapital/',
-        id: 'cfd6'
-      },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8u' }
+      }
     ],
     backgroundColor: '#6E47DC',
     cardsColor: '#7F5AF0',
     textColor: '#fff'
   },
-  'Mario-Contreras': {
+  'Joseph-Hernández': {
     id: 'b29f27bb',
-    username: 'Mario-Contreras',
-    name: 'Mario Contreras',
-    bio: 'Sr. Frontend Developer - I take joy in building Frontend projects that meet the highest web standards of excellence 🚀',
-    avatarUrl:
-      'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQhcon6NVdIQqZBw683bDel0DrXmTeOPNxUtprJcUy-Ii8_E7fD',
+    username: 'Joseph-Hernández',
+    name: 'Alan Joseph Hernández Becerra',
+    bio: 'Learning Experience Designer (LXD)',
+    avatarUrl: 'https://ajosephhb.netlify.app/img/perfil.png',
 
     links: [
       {
         title: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/marioecs/',
+        url: 'https://www.linkedin.com/in/ajosephhb/',
         id: 'cfd7'
       },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8' },
-      { title: 'Portfolio', url: 'https://mario.house/', id: 'cfd9' }
+      {
+        title: 'Youtube',
+        url: 'https://www.youtube.com/@ajosephhb',
+        id: 'cfd8'
+      },
+      {
+        title: 'Portfolio',
+        url: 'https://www.behance.net/ajosephhb',
+        id: 'cfd9'
+      }
     ],
     backgroundColor: '#6E47DC'
   },
-  'Alex-Dopa': {
+  'Antonio-Utrera': {
     id: 'e3a0b2c1',
-    username: 'Alex-Dopa',
-    name: 'Alex Dopa',
-    bio: 'Co-founder de FRQTAL, diseño de identidad, logotipos, botones y protocolos dentro de la APP.',
+    username: 'Antonio-Utrera',
+    name: 'Jose Antonio Utrera Díaz',
+    bio: 'Data Engineer at RappiCard | Web Scrapping | AirFlow | AWS | Datalake | DWH | ETL | SQL',
     avatarUrl:
-      'https://frqtal.org/src/pages/es/team/img/alex-dominguez-bn@2x.png',
+      'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSvkk9d7Ll4IKohRW7aqRscoBZMdExed57NZ-W2mB_utMkHWHLk',
     links: [
       {
-        title: 'Instagram',
-        url: 'https://www.instagram.com/alxdopa/',
+        title: 'Linkedin',
+        url: 'https://www.linkedin.com/in/j-antonio-udiaz/',
         id: 'cfd10'
       },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8' }
+      { title: 'Github', url: 'https://github.com/Antonio-Diaz', id: 'cfd8' }
     ],
     backgroundColor: '#E6E214',
     cardsColor: '#EAEDF5',
     textColor: '#000'
   },
-  'Saul-Macias': {
+  'Luis Ernesto Freyre Gonzalez': {
     id: 'f7b5e8d4',
-    username: 'Saul-Macias',
-    name: 'Saul Macias',
-    bio: 'Consultor para empresas AAA, en México. Asesor interno de FRQTAL en temas de estrategia.',
-    avatarUrl: 'https://frqtal.org/src/pages/es/team/img/img-0469@2x.png',
+    username: 'freyregonzalez',
+    name: 'Luis Ernesto Freyre Gonzalez',
+    bio: 'Automation Tester Engineer at AgileThought | Java | Selenium | JMeter | Postman | Cypress | Cucumber',
+    avatarUrl:
+      'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSUX5KpbxdVOzYVLzMDwNDFHQroNr6jVbf23Oq5P0_sY839vPEv',
     links: [
       {
-        title: 'Instagram',
-        url: 'https://www.instagram.com/alxdopa/',
+        title: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/freyregonzalez/',
         id: 'cfd10'
-      },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8' }
+      }
     ],
     backgroundColor: '#A3E6E2',
     cardsColor: '#B5EAE6'
   },
-  'Abraham-Shemer': {
+  'Ivan-Robles': {
     id: 'f7b5e8d4',
-    username: 'Abraham-Shemer',
-    name: 'Abraham Shemer',
-    bio: 'Licenciatura en finanzas por Stanford e inversionista en Venture Capital. Embajador de la comunidad Judía en LATAM.',
-    avatarUrl: 'https://frqtal.org/src/pages/es/team/img/rectangle-3959@2x.png',
-    backgroundColor: '#C4C4C4'
-  },
-  'Jhovanny-Altamirano': {
-    id: 'f7b5e8d4',
-    username: 'Jhovanny-Altamirano',
-    name: 'Jhovanny Altamirano',
-    bio: '·Analist & Investor DeFi ·Forex & Crypto Trader.',
-    avatarUrl: 'https://frqtal.org/src/pages/es/team/img/rectangle-3955@2x.png',
+    username: 'Ivan-Robles',
+    name: 'Ivan Robles Alonso',
+    bio: 'Frontend developer specialized in technologies related to React, with several years of experience helping to create solid and scalable digital products and making elegant code.',
+    avatarUrl: 'https://pbs.twimg.com/profile_images/1589750904668000257/-ZuM0BBV_400x400.jpg',
     links: [
       {
         title: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/jhovanny-altamirano-260399210/',
+        url: 'https://www.linkedin.com/in/ivanroblesalonso/',
         id: 'cfd190'
       },
       {
-        title: 'Instagram',
-        url: 'https://www.instagram.com/jho_altamirano_/',
+        title: 'Portfolio',
+        url: 'https://sharmaz.github.io/me/',
         id: 'cfd09l'
       },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8l2' }
+      { title: 'Blog', url: 'https://ivanrobles.pro/', id: 'cfd8l2' }
     ],
     backgroundColor: '#FF6F00',
     cardsColor: '#D35400'
   },
-  'Luis-Maumejean': {
-    id: 'f7b5e8d4',
-    username: 'Luis-Maumejean',
-    name: 'Luis Maumejean G',
-    bio: '·Chief Phygital Enabler / Orchestrating seamless integration initiatives to merge physical and digital landscapes, driving enhanced user experiences through strategic planning & innovative execution',
-    avatarUrl:
-      'https://frqtal.org/src/pages/es/team/img/b33627a2-2e0c-461b-aaef-b520bcd5e7d6-1@2x.png',
-    links: [
-      {
-        title: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/lemg/',
-        id: 'cfd190'
-      },
-      {
-        title: 'Instagram',
-        url: 'https://www.instagram.com/jho_altamirano_/',
-        id: 'cfd09l'
-      },
-      { title: 'Frqtal', url: 'https://frqtal.org/es/team', id: 'cfd8l2' }
-    ],
-    backgroundColor: '#D1F6FF',
-    cardsColor: '#D1F6FF'
-  }
 }
 
 export default profiles
